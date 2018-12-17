@@ -1,0 +1,97 @@
+<?php
+
+namespace App\Http\Controllers;
+use Auth;
+use Illuminate\Http\Request;
+use App\User;
+use App\Pekerjaan;
+
+
+class AuthController extends Controller
+{
+    public function getLogin()
+    {
+
+    	return view('login');
+    }
+
+    public function postLogin(Request $request)
+    {
+    	if (!\auth()->attempt(['email'=> $request->email, 'password'=>$request->password])) {
+    		return redirect('login');
+    	}else if(auth::user()->pekerjaan=="pelapor") {
+            return redirect('indexpelapor');
+        }else if (auth::user()->pekerjaan=="bpbd") {
+            return redirect('indexbpbd');
+        }else if(auth::user()->pekerjaan=="dinas") {
+            return redirect('indexdinas');
+        }
+        // dd($request->all());
+        // $input = $request->all();
+        // return view('home',compact('input'));
+
+    	// return redirect()->route('dashboard', compact('input'));
+    }
+
+    public function getRegister()
+    {
+    	$data = Pekerjaan::all();
+        // dd($data);
+        return view('register',compact('data'));
+        // return view('registerpelapor');
+    }
+
+    public function postRegister(Request $request)
+    {
+    	$this->validate($request, [
+    		'nama' => 'required|min:4',
+            'email' => 'required|email|unique:users',
+            'pekerjaan' => 'required',
+            'password' => 'required|min:6',
+            'confirmation' => 'required|same:password',
+    	]);
+
+        $input = $request->all();
+    	$data = new User();
+        $data->nama = $input['nama'];
+        $data->email = $input['email'];
+        $data->pekerjaan = $input['pekerjaan'];
+        $data->password = bcrypt($request->password);
+        // dd($data);
+        $data->save();
+        return redirect('login')->with('alert-success','Kamu berhasil Register');
+
+    }
+
+    // public function create()
+    // {
+    //     $data = pekerjaan::all();
+    //     // dd($data);
+    //     return view('register',compact('data'));
+    // }
+
+    public function logout()
+    {
+    	\auth()->logout();
+
+    	return redirect()->route('login');
+    }
+
+    public function edit($id)
+    {
+         $data = modelUser::find($id);
+
+        return view('editProfilPelapor',compact('data'));
+    }
+    
+    public function menuPelapor($id)
+    {
+        $data = modelUser::find($id);
+        return view('menuPelapor', compact('data'));
+    }
+
+    public function update()
+    {
+
+    }
+}
