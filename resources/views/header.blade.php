@@ -6,7 +6,7 @@
                 <!-- <div class="intro-heading">It's Nice To Meet You</div> -->
                 </br>
             </br>
-                <a href="/login" class="page-scroll btn btn-xl">SIGN IN</a>
+                <a href="{{route('login')}}" class="page-scroll btn btn-xl">SIGN IN</a>
             </div>
         </div>
     </header>
