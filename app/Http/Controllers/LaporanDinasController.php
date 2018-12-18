@@ -13,7 +13,7 @@ class LaporanDinasController extends Controller
   //       $LaporanMasuk = modelLaporan::whereHas('user', function ($query) {
 		//     $query->where('file', null);
 		// })->get();
-		$LaporanMasuk = modelLaporan::all();
+		$Laporan = modelLaporan::all();
 		$user = User::where('pekerjaan', 'pelapor')->get();
 		// $data = $LaporanMasuk->where('user_id', $user['0']['']);
 		// dd($data);
@@ -21,7 +21,7 @@ class LaporanDinasController extends Controller
 		// $LaporanMasuk['user'] = User::where('id', 2);
         // $user = User::where('id', 2)->get();
         // dd($LaporanMasuk['user_id']);
-        return view('lihatLaporanDinas', compact('LaporanMasuk', 'user'));
+        return view('lihatLaporanDinas', compact('Laporan', 'user'));
     }
 
     public function edit($id){

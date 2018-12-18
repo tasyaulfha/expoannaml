@@ -8,6 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <title>LACAK - Lapor Cari Perbaiki</title>
+  <link rel="icon" type="image/png" href="/img/maps2.png">
   <!-- Bootstrap core CSS-->
   <link href="vendor/bootstrap3/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
@@ -44,22 +45,20 @@
           <i class="fa fa-forms"></i>Atur Profil</div>
         <div class="card-body">
             <div class="card-body">
-            <form action="#" method="POST">
+            <form action="{{ route('editprofil.update') }}" method="POST">
               {{ csrf_field()}}
-               <div class="form-group">
-                <label>ID:</label>
-                <input type="text" name="id" class="form-control" value="{{$data->user_id}}" readonly="">
+
               <div class="form-group">
                 <label>Nama:</label>
-                <input type="text" name="nama" class="form-control" value="{{$data->nama}}">
+                <input type="text" name="nama" class="form-control" value="{{$user->nama}}">
               </div>
               <div class="form-group">
                 <label>Email:</label>
-                <input type="email" name="email" class="form-control" value="{{$data->email}}">
+                <input type="email" name="email" class="form-control" value="{{$user->email}}" readonly="">
               </div>
               <div class="form-group">
                 <label>Password:</label>
-                <input type="password" name="password" class="form-control" value="{{$data->password}}">
+                <input type="password" name="password" class="form-control" value="{{$user->password}}">
               </div>
               <!--  <div class="form-group">
                 <label>Ganti Password:</label>
@@ -84,23 +83,7 @@
       <i class="fa fa-angle-up"></i>
     </a>
     <!-- Logout Modal-->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="/index">Logout</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    @include('logout')
 
 
     <!-- Jquery JS-->

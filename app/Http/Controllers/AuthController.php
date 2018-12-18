@@ -5,6 +5,7 @@ use Auth;
 use Illuminate\Http\Request;
 use App\User;
 use App\Pekerjaan;
+use App\ModelUser;
 
 
 class AuthController extends Controller
@@ -77,21 +78,69 @@ class AuthController extends Controller
     	return redirect()->route('login');
     }
 
-    public function edit($id)
+   public function edit()
     {
-         $data = modelUser::find($id);
-
-        return view('editProfilPelapor',compact('data'));
+        $data = Auth::user()->id;
+        $user = User::where('id', $data)->first();
+        // dd($user);
+        // dd($data);
+        return view('editProfilPelapor', compact('user'));
     }
     
-    public function menuPelapor($id)
+    public function update(Request $request)
     {
-        $data = modelUser::find($id);
-        return view('menuPelapor', compact('data'));
+        $data = Auth::user()->id;
+        
+        $user = User::findOrFail($data);
+        $user->nama = $request->nama;
+        $user->email = $request->email;
+        $user->password = $request->password;
+        $user->update();
+        // dd($input);
+        return redirect('indexpelapor')->with('alert-success', 'Sukses Edit Profil');
     }
 
-    public function update()
+    public function editBpbd()
+     {
+        $data = Auth::user()->id;
+        $user = User::where('id', $data)->first();
+        // dd($user);
+        // dd($data);
+        return view('editProfilBpbd', compact('user'));
+    }
+    
+    public function updateBpbd(Request $request)
     {
+        $data = Auth::user()->id;
+        
+        $user = User::findOrFail($data);
+        $user->nama = $request->nama;
+        $user->email = $request->email;
+        $user->password = $request->password;
+        $user->update();
+        // dd($input);
+        return redirect('indexbpbd')->with('alert-success', 'Sukses Edit Profil');
+    }
 
+    public function editDinas()
+     {
+        $data = Auth::user()->id;
+        $user = User::where('id', $data)->first();
+        // dd($user);
+        // dd($data);
+        return view('editProfilDinas', compact('user'));
+    }
+    
+    public function updateDinas(Request $request)
+    {
+        $data = Auth::user()->id;
+        
+        $user = User::findOrFail($data);
+        $user->nama = $request->nama;
+        $user->email = $request->email;
+        $user->password = $request->password;
+        $user->update();
+        // dd($input);
+        return redirect('indexdinas')->with('alert-success', 'Sukses Edit Profil');
     }
 }

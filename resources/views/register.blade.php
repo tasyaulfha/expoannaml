@@ -105,7 +105,7 @@
 							Sudah punya akun?
 						</span>
 
-						<a href="/login-pelapor" class="txt2 hov1">
+						<a href="{{route('login')}}" class="txt2 hov1">
 							Masuk
 						</a>
 					</div>

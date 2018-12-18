@@ -49,6 +49,7 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
+                  <th>No</th>
                   <th>Nama Pelapor</th>
                   <th>Nama Infrastruktur</th>
                   <th>Jenis Kerusakan</th>
@@ -61,8 +62,11 @@
                 </tr>
               </thead>
               <tbody>
+                <?php $no = 0;?>
                 @foreach($LaporanMasuk as $key => $datas)
+                <?php $no++ ;?>
                 <tr>
+                  <td>{{$no}}</td>
                   <td>{{$datas -> user -> nama}}</td>
                   <td>{{$datas->nama_infrastruktur}}</td>
                   <td>{{$datas->jenis_kerusakan}}</td>
@@ -74,7 +78,7 @@
                   <td><form align="center" action="{{route('laporanmasuk.destroy',$datas->id)}}" method="post">
                     {{csrf_field()}}
                     {{ method_field('DELETE') }}
-                      <a href="{{url('editDataLaporan/'.$datas->id)}}" class="btn-sm btn-primary">Edit</a>
+                      <a href="{{url('editDataLaporan/'.$datas->id)}}" class="btn-sm btn-primary">Verifikasi</a>
                       <button class="btn-sm btn-danger" type="submit" onclick="return confirm('Yakin ingin menghapus data?')">Delete</button></form>
                             </td>
                 </tr>

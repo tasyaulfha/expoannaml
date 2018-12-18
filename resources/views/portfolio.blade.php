@@ -14,11 +14,11 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/jembatan-rusak.jpg" class="img-responsive" alt="">
+                        <img src="img/portfolio/1.jpg" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Jembatan Rusak</h4>
-                        <p class="text-muted">Ket:</p>
+                        <h4>Jembatan Penghubung Pantai Carita Roboh</h4>
+                        <p class="text-muted"></p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
@@ -28,11 +28,11 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/sekolah.jpg" class="img-responsive" alt="">
+                        <img src="img/portfolio/2.jpg" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Sekolah Tidak Layak</h4>
-                        <p class="text-muted">Ket:</p>
+                        <h4>Kondisi Jalan di Perbatasan Pulau Sebatik</h4>
+                        <p class="text-muted"></p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
@@ -42,11 +42,11 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/jembatan-putus.jpg" class="img-responsive" alt="">
+                        <img src="img/portfolio/3.jpg" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Jembatan Putus</h4>
-                        <p class="text-muted">Ket:</p>
+                        <h4>RSUD Tanjung Lombok Utara Rusak Parah Akibat Gempa</h4>
+                        <p class="text-muted"></p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
@@ -56,11 +56,11 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/rumah-sakit.jpg" class="img-responsive" alt="">
+                        <img src="img/portfolio/4.jpg" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Plafon Rumah Sakit Rusak</h4>
-                        <p class="text-muted">Ket:</p>
+                        <h4>Jembatan Putus di Madina</h4>
+                        <p class="text-muted"></p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
@@ -70,11 +70,11 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/landasan-pacu.jpg" class="img-responsive" alt="">
+                        <img src="img/portfolio/5.jpg" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Landasan Bandara Rusak</h4>
-                        <p class="text-muted">Ket:</p>
+                        <h4>Bandara Palu Ditutup 24 Jam Pasca Gempa</h4>
+                        <p class="text-muted"></p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
@@ -84,11 +84,11 @@
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/tanggul-jebol.jpg" class="img-responsive" alt="">
+                        <img src="img/portfolio/6.jpg" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Tanggul Jebol </h4>
-                        <p class="text-muted">Ket:</p>
+                        <h4>Banjir Rusak Aspal Jalan Raya</h4>
+                        <p class="text-muted"></p>
                     </div>
                 </div>
             </div>
