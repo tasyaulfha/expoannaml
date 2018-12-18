@@ -49,6 +49,7 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
+                  <th>No</th>
                   <th>Nama Pelapor</th>
                   <th>Nama Infrastruktur</th>
                   <th>Jenis Kerusakan</th>
@@ -60,8 +61,11 @@
                 </tr>
               </thead>
               <tbody>
+                <?php $no = 0;?>
                   @foreach($lapor as $datas)
+                <?php $no++ ;?>
                 <tr>
+                  <td>{{$no}}</td>
                   <td>{{$datas -> user -> nama}}</td>
                   <td>{{$datas->nama_infrastruktur}}</td>
                   <td>{{$datas->jenis_kerusakan}}</td>
