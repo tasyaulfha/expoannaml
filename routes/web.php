@@ -54,7 +54,7 @@ Route::get('/profil', function () {
 
 Route::get('register','AuthController@getRegister')->name('register')->middleware('guest');
 Route::post('register','AuthController@postRegister')->middleware('guest');
-Route::get('login','AuthController@getLogin')->middleware('guest')->name('login');
+Route::get('/login','AuthController@getLogin')->middleware('guest')->name('login');
 Route::post('login','AuthController@postLogin')->middleware('guest');
 
 Route::get('/home',function(){
@@ -82,7 +82,11 @@ Route::get('/laporanDinas','LaporanDinasController@show')->name('laporanDinas.sh
 Route::get('/editDataDinas/{id}','LaporanDinasController@edit')->name('editDataLaporan.edit');
 Route::post('/editDataDinas/{id}','LaporanDinasController@update')->name('editDataLaporan.update');
 
-//Profil
-Route::get('/editProfilPelapor/{id}','AuthController@edit')->name('editProfilPelapor.edit');
-Route::get('/menuPelapor', 'AuthController@menuPelapor')->name('menupelapor');
+Route::get('/editProfilPelapor', 'AuthController@edit')->name('editprofil.edit');
+Route::post('/editProfilPelapor', 'AuthController@update')->name('editprofil.update');
 
+Route::get('/editProfilBpbd', 'AuthController@editBpbd')->name('editprofil.editBpbd');
+Route::post('/editProfilBpbd', 'AuthController@updateBpbd')->name('editprofil.updateBpbd');
+
+Route::get('/editProfilDinas', 'AuthController@editDinas')->name('editprofil.editDinas');
+Route::post('/editProfilDinas', 'AuthController@updateDinas')->name('editprofil.updateDinas');
