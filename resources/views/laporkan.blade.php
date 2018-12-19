@@ -10,20 +10,20 @@
   <title>LACAK - Lapor Cari Perbaiki</title>
   <link rel="icon" type="image/png" href="/img/maps2.png">
   <!-- Bootstrap core CSS-->
-  <link href="/vendor/bootstrap3/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap3/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
-  <link href="/vendor/font-awesome2/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="vendor/font-awesome2/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <!-- Page level plugin CSS-->
-  <link href="/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
   <!-- Custom styles for this template-->
-  <link href="/css/sb-admin.css" rel="stylesheet">
+  <link href="css/sb-admin.css" rel="stylesheet">
 
 
    <!-- Font special for pages-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 
     <!-- Main CSS-->
-    <link href="/css/main2.css" rel="stylesheet" media="all">
+    <link href="css/main2.css" rel="stylesheet" media="all">
  
 </head>
 
