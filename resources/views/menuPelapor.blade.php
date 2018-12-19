@@ -13,7 +13,7 @@
           </a>
         </li> -->
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Profil">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="{{ route('editprofil.edit') }}">
             <i class="fa fa-fw fa-users"></i>
             <span class="nav-link-text">Profil</span>
           </a>
