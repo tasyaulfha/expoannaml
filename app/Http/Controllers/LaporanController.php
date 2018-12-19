@@ -52,7 +52,7 @@ class LaporanController extends Controller
         $data = "N";
         if($request->hasFile('file'))
         {
-            $destination = "/public/upload";
+            $destination = "upload";
             $file = $request->file('file');
             $file->move($destination,$file->getClientOriginalName());
             $data="Y";
